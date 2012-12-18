@@ -49,7 +49,7 @@ Gem::Specification.new do |s|
   s.add_dependency(%q<omniauth-oauth2>, [">= 1.1.1"])
   s.add_dependency(%q<omniauth-facebook>, [">= 1.4.1"])
   s.add_dependency(%q<omniauth-linkedin>, [">= 0.0.8"])  
-  s.add_runtime_dependency 'omniauth-oauth', '~> 1.0'
+  s.add_dependency(%q<omniauth-oauth>, [">= 1.0"])
   s.add_dependency(%q<omniauth-twitter>, [">= 0"])
   s.add_dependency(%q<prototype-rails>, [">= 0"])
   s.add_dependency(%q<rails_autolink>, [">= 0"])
