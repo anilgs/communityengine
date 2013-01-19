@@ -706,7 +706,7 @@ en:
   #en: log_in_to_reply_to_this_topic: Log in to reply to this topic
   log_in_to_reply_to_this_topic: Log in to reply to this topic
   #en: log_in_to_site: Log in to %{site}
-  log_in_to_site: "Log in to %{site}"
+  log_in_to_site: "Log in"
   #en: log_in_to_vote: Log in to vote
   log_in_to_vote: Log in to vote
   #en: log_in_to_your: Log in to your
