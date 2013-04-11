@@ -27,7 +27,8 @@ class User < ActiveRecord::Base
       #c.validates_format_of_login_field_options = { :with => /\A[\sA-Za-z0-9_-]+\z/, :unless => :omniauthed? }
       c.validates_length_of_email_field_options = { :within => 3..100, :if => :email_required? }
       c.validates_format_of_email_field_options = { :with => /\A([^@\s]+)@((?:[-a-z0-9A-Z]+\.)+[a-zA-Z]{2,})\z/, :if => :email_required? }
-      c.validates_uniqueness_of_email_field_options :case_sensitive => false
+      #Using email_id with multiple hotel chains..hence disable the rule
+      #c.validates_uniqueness_of_email_field_options :case_sensitive => false
     end
   rescue StandardError
     puts 'Failed to initialize AuthLogic'
