@@ -1,8 +1,8 @@
 class Ad < ActiveRecord::Base
-  FREQUENCIES = 1..10
+  FREQUENCIES = 0..10
   AUDIENCES = %w(all logged_in logged_out)
 
-  validates_presence_of :html
+  #validates_presence_of :html
   validates_inclusion_of :audience, :in => AUDIENCES
   validates_inclusion_of :frequency, :in => FREQUENCIES  
   
