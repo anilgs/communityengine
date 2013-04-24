@@ -1,5 +1,5 @@
 class SbPost < ActiveRecord::Base
-  acts_as_activity :user, :if => Proc.new{|record| record.user } #don't record an activity if there's no user  
+  #acts_as_activity :user, :if => Proc.new{|record| record.user } #don't record an activity if there's no user  
   include Rakismet::Model
   rakismet_attrs :author => :username, :comment_type => 'comment', :content => :body, :user_ip => :author_ip
   

@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  acts_as_activity :user
+  #acts_as_activity :user
   validates_presence_of :name
   validates_presence_of :start_time
   validates_presence_of :end_time
