@@ -1,5 +1,4 @@
 # -*- encoding: utf-8 -*-
-#AGS: Friendly creating infinite loop...upgraded to 4.0.9
 lib = File.expand_path('../lib/', __FILE__)
 $:.unshift lib unless $:.include?(lib)
 require 'community_engine/version'
@@ -40,7 +39,7 @@ Gem::Specification.new do |s|
   s.add_dependency(%q<aws-s3>, [">= 0"])
   s.add_dependency(%q<kaminari>, [">= 0"])
   s.add_dependency(%q<dynamic_form>, [">= 0"])
-  s.add_dependency(%q<friendly_id>, ["~> 4.0.9"])
+  s.add_dependency(%q<friendly_id>, ["~> 3.3.3.0"])
   s.add_dependency(%q<paperclip>, ["~> 2.4.3"])
   s.add_dependency(%q<cocaine>, ["0.3.2"])
   s.add_dependency(%q<acts_as_commentable>, ["= 3.0.1"])
