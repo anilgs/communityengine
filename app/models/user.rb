@@ -48,11 +48,11 @@ class User < ActiveRecord::Base
   after_destroy :recount_metro_area_users
 
   #validation
-  validates_presence_of     :metro_area, :if => Proc.new { |user| user.state }
-  validates_uniqueness_of   :login
-  validates_exclusion_of    :login, :in => configatron.reserved_logins
+  #validates_presence_of     :metro_area, :if => Proc.new { |user| user.state }
+  #validates_uniqueness_of   :login
+  #validates_exclusion_of    :login, :in => configatron.reserved_logins
 
-  validate :valid_birthday, :if => :requires_valid_birthday?
+  #validate :valid_birthday, :if => :requires_valid_birthday?
   validate :check_spam    
   
   #associations
