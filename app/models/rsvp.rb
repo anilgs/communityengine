@@ -18,6 +18,6 @@ private
   end
 
   def event_in_future
-    errors.add(:base, :cannot_rsvp_for_an_event_that_has_already_happened.l) if self.event.end_time < Time.now
+    errors.add(:base, :cannot_rsvp_for_an_event_that_has_already_happened.l) if self.event && self.event.end_time < Time.now
   end
 end
