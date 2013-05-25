@@ -9,8 +9,7 @@ class Rsvp < ActiveRecord::Base
   belongs_to :user
   belongs_to :event
 
-  attr_protected :user_id
-  attr_protected :event_id
+  attr_accessible :user_id, :event_id
 
 private
 
