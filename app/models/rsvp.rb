@@ -14,7 +14,7 @@ class Rsvp < ActiveRecord::Base
 private
 
   def event_allows_rsvp
-    errors.add(:base, :event_does_not_allow_rsvp.l) unless self.event.allow_rsvp?
+    errors.add(:base, :event_does_not_allow_rsvp.l) unless self.event && self.event.allow_rsvp?
   end
 
   def event_in_future
