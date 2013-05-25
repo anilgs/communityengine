@@ -8,11 +8,15 @@ class Event < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :metro_area
-  has_many :rsvps, :dependent=>:destroy
+  has_many :rsvps, :dependent=>:destroy, :before_add => :set_parent
   has_many :attendees, :source=>:user, :through=>:rsvps
 
   attr_protected :user_id
   
+  def set_parent(child)
+    child.event ||= self
+  end
+
   #Procs used to make sure time is calculated at runtime
   scope :upcoming, lambda { 
     where('end_time > ?' , Time.now).order('start_time ASC')
